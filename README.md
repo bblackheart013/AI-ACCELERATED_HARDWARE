@@ -58,15 +58,23 @@ mkdir -p build
 make sim
 
 # Run performance test (Mac compatibility version)
+
 gcc -o build/performance_tester src/mac_performance_tester.c
 ./build/performance_tester
+```
 
-Performance
+# Performance
 This design demonstrates the fundamental principle behind AI hardware acceleration: parallelism. Theoretical speedup scales linearly with vector size:
-Vector SizeTheoretical Speedup84.00x6456.89x512504.12x40964088.02x
-Future Extensions
 
-Matrix multiplication implementation
-Convolution operations
-Activation functions
-Multi-layer neural network acceleratione
+| Vector Size | Theoretical Speedup |
+|-------------|---------------------|
+| 8           | 4.00x              |
+| 64          | 56.89x             |
+| 512         | 504.12x            |
+| 4096        | 4088.02x           |
+
+### Future Extensions
+- Matrix multiplication implementation
+- Convolution operations
+- Activation functions
+- Multi-layer neural network acceleration
