@@ -58,7 +58,6 @@ mkdir -p build
 make sim
 
 # Run performance test (Mac compatibility version)
-
 gcc -o build/performance_tester src/mac_performance_tester.c
 ./build/performance_tester
 ```
